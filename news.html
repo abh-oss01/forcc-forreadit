@@ -1,1 +1,161 @@
-news here
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 0.7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('http://img.wallpaperfolder.com/f/4A5C6F0B2643/earth-space-station-satellite-photos.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("img_parallax2.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("img_parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+/* Turn off parallax scrolling for tablets and mobiles */
+@media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li><a href="#" class="w3-padding-large">HOME</a></li>
+    <li class="w3-hide-small w3-right">
+      <a href="#" class="w3-padding-large w3-hover-red"><i class="fa fa-search"></i></a>
+    </li>
+  </ul>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-opacity w3-display-container">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">SATELLITE <span class="w3-hide-small">FOCUS</span> INDIA    </span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT THE NEWS</h3>
+  
+  <p>A satellite belonging to a London-based mobile satellite communication company recently moved over India, above the Equator, in the space after travelling more than 4,000km over several months.
+Thrusters onboard communication satellite 4F2, which is one of the 12 satellites owned by Inmarsat, were fired from the satellite control centre in London for the spacecraft to move from one slot to another.
+The satellite, weighing close to 6,000kg, which was built at a cost of $250 million was launched in 2005 and was placed over Africa, providing coverage to Africa and Europe.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-section">
+      <p><b>The Satellite</b></p><br>
+      <img src="http://students.um.edu.mt/icil0002/Pics/HubbleTelescope.gif" class="w3-circle" alt="Photo of Me" style="width:55%">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-section">
+      <p>The satellite, weighing close to 6,000kg, which was built at a cost of $250 million was launched in 2005 and was placed over Africa, providing coverage to Africa and Europe.
+It was decided to be moved more than two years ago at a cost of $10million. After travelling over several months, Inmarsat 4F2 reached its current location in December 2015, joining the group of more than 80 satellites belonging to other countries in the eastern longitude in the geostationary orbit.
+Global government market development director Matthew Maher, who was in Chennai recently, said the satellite was moved over India from its initial slot to enhance services in India and surrounding countries including those in the Middle East. "With us, moving a satellite in the space is a rare occurrence. It is a planned event and to move in sky it takes a lot of effort," he said.
+Maher said when the personnel at the satellite control centre fired the in-built boosters of Inmarsat 4F2, the satellite lifted up from its position about 25° east over Europe and Africa to move.</p>
+    </div>
+  </div>
+</div>
+    
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Made by Akshit Garg</p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+</script>
+
+</body>
+</html>
