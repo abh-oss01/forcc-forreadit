@@ -37,7 +37,7 @@
       "settings": {
         "main": true,
         "title": "Home",
-        "meta_descr": "",
+        "meta_descr": "Home Page",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
@@ -160,9 +160,9 @@
         }
       ]
     },
-    "page1.html": {
+    "pricing.html": {
       "settings": {
-        "meta_descr": "Web Site Generator Description",
+        "meta_descr": "Pricing Page",
         "title": "Pricing",
         "order": 1
       },
