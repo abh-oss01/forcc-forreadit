@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Tutoring",
-    "currentPage": "pricing.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -24,9 +24,10 @@
         "display4Font": "Rubik",
         "display4Size": 1,
         "isRoundedButtons": true,
-        "isAnimatedOnScroll": false,
-        "isScrollToTopButton": false
-      }
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": true
+      },
+      "additionalSetColors": []
     },
     "versionFirst": "4.5.2",
     "uniqCompNum": 8,
