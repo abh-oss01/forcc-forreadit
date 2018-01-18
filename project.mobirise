@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Tutoring",
-    "currentPage": "pricing.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -30,8 +30,14 @@
       "additionalSetColors": []
     },
     "versionFirst": "4.5.2",
-    "uniqCompNum": 8,
-    "versionPublish": "4.5.2"
+    "uniqCompNum": 9,
+    "versionPublish": "4.5.2",
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "robotsSwitcher": "",
+    "siteUrl": "",
+    "sitemapSwitcherAuto": "on",
+    "favicon": "",
+    "noImageResize": ""
   },
   "pages": {
     "index.html": {
