@@ -338,7 +338,7 @@
                 "overlay": true,
                 "contentAlign": "center",
                 "text": "",
-                "buttons": " <a data-app-btn=\"true\" class=\"btn  btn-white-outline display-4\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">Download Now!</a>"
+                "buttons": " <a data-app-btn=\"true\" class=\"btn  btn-white-outline display-4\" href=\"http://google.com\" data-toolbar=\"-mbrBtnMove\">Download Now!</a>"
               },
               {
                 "image": "@PROJECT_PATH@/assets/images/photo6050619308515634291-720x1280.jpg",
